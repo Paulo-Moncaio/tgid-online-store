@@ -6,9 +6,9 @@ import { useContext } from 'react'
 export default function Cart() {
   const cart = useContext(CartContext)
   return (
-    <main className="mx-4 lg:mx-auto max-w-screen-lg mt-16 mb-4">
-      <h2>Seu Carrinho</h2>
-      <ul className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto">
+    <main className="mx-4 mb-4 mt-16 max-w-screen-lg lg:mx-auto">
+      <h1>Seu Carrinho</h1>
+      <ul className="mx-auto grid grid-cols-1 gap-4 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {cart.items.map((item) => (
           <ProductCard
             key={item.id}

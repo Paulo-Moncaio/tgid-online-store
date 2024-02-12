@@ -39,48 +39,56 @@ export default function ProductCard({
 
   console.log('props:', props.title)
   return (
-    <div className="bg-zinc-600 text-slate-100 flex flex-col rounded-xl hover:cursor-pointer">
+    <div className="flex flex-col rounded-xl bg-zinc-600 text-slate-100 transition-all hover:scale-105 hover:cursor-pointer">
       <Image
         src={props.image}
         alt={`${'merda'} image`}
-        className="w-auto h-auto rounded-t-xl"
+        className="size-auto rounded-t-xl"
         width={250}
         height={353}
       />
-      <div className="h-full flex flex-col justify-between">
-        <h1 className="px-4 py-2 font-semibold text-lg">{props.title}</h1>
-        <div className="px-4 p-1">
+      <div className="flex h-full flex-col justify-between">
+        <h2 className="px-4 py-2 text-lg font-semibold">{props.title}</h2>
+        <div className="flex justify-between p-1 px-4">
           <Image
             src={getPlatformLogo(props.platform)}
             alt={props.platform}
-            className="w-auto h-auto max-h-10"
+            className="size-auto max-h-10"
             width={250}
             height={100}
           />
+          {props.quantity && (
+            <p className="">
+              Quantidade:{' '}
+              <span className="font-semibold text-green-500">
+                {props.quantity}
+              </span>
+            </p>
+          )}
         </div>
-        <div className="flex items-center bg-zinc-500 rounded-b-xl">
+        <div className="flex items-center rounded-b-xl bg-zinc-700">
           {isInCart ? (
             <button
               onClick={onRemoveFromCart}
-              className="group flex hover:bg-red-600 transition-all bg-zinc-400 p-2 px-4 rounded-bl-xl"
+              className="group flex rounded-bl-xl bg-zinc-500 p-2 px-4 transition-all hover:bg-red-600"
               aria-label="remove from cart"
               role="button"
             >
-              <TrashIcon className="group-hover:fill-red-500 w-6 h-6 mr-2 group-hover:-translate-y-1 transition-transform" />
+              <TrashIcon className="mr-2 size-6 transition-transform group-hover:-translate-y-1 group-hover:fill-red-500" />
               <p>Remover</p>
             </button>
           ) : (
             <button
               onClick={onAddToCart}
-              className="group flex hover:bg-green-600 transition-all bg-zinc-400 p-2 px-4 rounded-bl-xl"
+              className="group flex rounded-bl-xl bg-zinc-500 p-2 px-4 transition-all hover:bg-green-600"
               aria-label="add to cart"
               role="button"
             >
-              <ShoppingCartIcon className="group-hover:fill-green-600 w-6 h-6 mr-2 group-hover:-translate-y-1 transition-transform " />
+              <ShoppingCartIcon className="mr-2 size-6 transition-transform group-hover:-translate-y-1 group-hover:fill-green-600 " />
               <p>Comprar</p>
             </button>
           )}
-          <p className="text-green-500 w-full text-center font-bold">{`$${props.price}`}</p>
+          <p className="w-full text-center font-bold text-green-500">{`$${props.price}`}</p>
         </div>
       </div>
     </div>

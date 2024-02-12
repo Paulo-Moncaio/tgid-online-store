@@ -6,8 +6,8 @@ export default function Home() {
   const products = useFetchProducts()
 
   return (
-    <main className="mx-4 lg:mx-auto max-w-screen-lg mt-16 bg-slate-800">
-      <ul className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto">
+    <main className="mx-4 mt-16 max-w-screen-lg bg-slate-800 lg:mx-auto">
+      <ul className="mx-auto grid grid-cols-1 gap-6 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {products.map((item) => (
           <ProductCard
             id={item.id}

@@ -19,8 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <CartProvider>
-        <body className={inter.className + 'bg-slate-800'}>
-          <Header>{children}</Header>
+        <body className={`bg-slate-800 ${inter.className}`}>
+          <Header />
+          {children}
         </body>
       </CartProvider>
     </html>
