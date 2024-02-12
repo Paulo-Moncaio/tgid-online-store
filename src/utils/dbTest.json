@@ -1,0 +1,124 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "The Legend of Zelda: Breath of the Wild",
+      "platform": "Nintendo Switch",
+      "price": 59.99
+    },
+    {
+      "id": 2,
+      "title": "Red Dead Redemption 2",
+      "platform": "PS4",
+      "price": 49.99
+    },
+    {
+      "id": 3,
+      "title": "The Last of Us Part II",
+      "platform": "PS4",
+      "price": 39.99
+    },
+    {
+      "id": 4,
+      "title": "Super Mario Odyssey",
+      "platform": "Nintendo Switch",
+      "price": 29.99
+    },
+    {
+      "id": 5,
+      "title": "God of War",
+      "platform": "PS4",
+      "price": 69.99
+    },
+    {
+      "id": 6,
+      "title": "Animal Crossing: New Horizons",
+      "platform": "Nintendo Switch",
+      "price": 49.99
+    },
+    {
+      "id": 7,
+      "title": "Marvel's Spider-Man",
+      "platform": "PS4",
+      "price": 39.99
+    },
+    {
+      "id": 8,
+      "title": "Hades",
+      "platform": "Nintendo Switch",
+      "price": 24.99
+    },
+    {
+      "id": 9,
+      "title": "Assassin's Creed Valhalla",
+      "platform": "PS4",
+      "price": 59.99
+    },
+    {
+      "id": 10,
+      "title": "Minecraft",
+      "platform": "Nintendo Switch",
+      "price": 29.99
+    },
+    {
+      "id": 11,
+      "title": "Cyberpunk 2077",
+      "platform": "PS4",
+      "price": 49.99
+    },
+    {
+      "id": 12,
+      "title": "Super Smash Bros. Ultimate",
+      "platform": "Nintendo Switch",
+      "price": 59.99
+    },
+    {
+      "id": 13,
+      "title": "FIFA 22",
+      "platform": "PS4",
+      "price": 59.99
+    },
+    {
+      "id": 14,
+      "title": "The Witcher 3: Wild Hunt",
+      "platform": "Nintendo Switch",
+      "price": 39.99
+    },
+    {
+      "id": 15,
+      "title": "Call of Duty: Warzone",
+      "platform": "PS4",
+      "price": 0
+    },
+    {
+      "id": 16,
+      "title": "The Legend of Zelda: Skyward Sword HD",
+      "platform": "Nintendo Switch",
+      "price": 59.99
+    },
+    {
+      "id": 17,
+      "title": "Uncharted 4: A Thief's End",
+      "platform": "PS4",
+      "price": 19.99
+    },
+    {
+      "id": 18,
+      "title": "Mario Kart 8 Deluxe",
+      "platform": "Nintendo Switch",
+      "price": 59.99
+    },
+    {
+      "id": 19,
+      "title": "The Last of Us Remastered",
+      "platform": "PS4",
+      "price": 19.99
+    },
+    {
+      "id": 20,
+      "title": "Luigi's Mansion 3",
+      "platform": "Nintendo Switch",
+      "price": 39.99
+    }
+  ]
+}
