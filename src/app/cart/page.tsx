@@ -1,21 +1,24 @@
 'use client'
 import ProductCard from '@/components/ProductCard'
-import useFetchProducts from '@/hooks/useProducts'
+import { CartContext } from '@/contexts/CartContext'
+import { useContext } from 'react'
 
-export default function Home() {
-  const products = useFetchProducts()
-
+export default function Cart() {
+  const cart = useContext(CartContext)
   return (
-    <main className="mx-4 lg:mx-auto max-w-screen-lg mt-16 bg-slate-800">
+    <main className="mx-4 lg:mx-auto max-w-screen-lg mt-16 mb-4">
+      <h2>Seu Carrinho</h2>
       <ul className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto">
-        {products.map((item) => (
+        {cart.items.map((item) => (
           <ProductCard
-            id={item.id}
             key={item.id}
+            id={item.id}
             title={item.title}
             platform={item.platform}
             price={item.price}
             image={item.image}
+            isInCart={item.isInCart}
+            quantity={item.quantity}
           />
         ))}
       </ul>
