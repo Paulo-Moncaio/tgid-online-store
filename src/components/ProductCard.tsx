@@ -5,6 +5,7 @@ import { getPlatformLogo } from '@/utils/getPlatformLogo'
 import { CartContext } from '@/contexts/CartContext'
 import { useContext } from 'react'
 import Link from 'next/link'
+import { redirect } from 'next/navigation'
 
 export type ProductCardProps = {
   id: string
@@ -33,6 +34,9 @@ export default function ProductCard({
       isInCart: true,
     })
   }
+  function redirectToDetail() {
+    redirect(`/product/${props.id}`)
+  }
 
   function onRemoveFromCart() {
     cart?.removeItem(props.id.toString())
@@ -40,17 +44,17 @@ export default function ProductCard({
 
   console.log('props:', props.title)
   return (
-    <Link
-      className="flex flex-col rounded-xl bg-zinc-600 text-slate-100 transition-all hover:scale-105 hover:cursor-pointer"
-      href={`/product/${props.id}`}
-    >
-      <Image
-        src={props.image}
-        alt={`${'merda'} image`}
-        className="size-auto rounded-t-xl"
-        width={250}
-        height={353}
-      />
+    <div className="flex flex-col rounded-xl bg-zinc-600 text-slate-100 transition-all hover:scale-105">
+      <Link href={`/product/${props.id}`}>
+        <Image
+          src={props.image}
+          alt={`${'merda'} image`}
+          className="size-auto w-full rounded-t-xl"
+          width={250}
+          height={353}
+          onClick={redirectToDetail}
+        />
+      </Link>
       <div className="flex h-full flex-col justify-between">
         <h2 className="px-4 py-2 text-lg font-semibold">{props.title}</h2>
         <div className="flex justify-between p-1 px-4">
@@ -84,7 +88,7 @@ export default function ProductCard({
           ) : (
             <button
               onClick={onAddToCart}
-              className="group flex rounded-bl-xl bg-zinc-500 p-2 px-4 transition-all hover:bg-green-600"
+              className="group z-10 flex rounded-bl-xl bg-zinc-500 p-2 px-4 transition-all hover:bg-green-600"
               aria-label="add to cart"
               role="button"
             >
@@ -95,6 +99,6 @@ export default function ProductCard({
           <p className="w-full text-center font-bold text-green-500">{`$${props.price}`}</p>
         </div>
       </div>
-    </Link>
+    </div>
   )
 }
