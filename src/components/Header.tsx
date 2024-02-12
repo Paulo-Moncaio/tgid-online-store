@@ -17,7 +17,7 @@ export default function Header() {
         className="group flex items-center text-blue-500 transition-all hover:text-blue-600"
       >
         {cart.getTotalQuantity() > 0 && (
-          <span className="mr-2 size-7 rounded-full bg-red-600 pl-2 pt-1 text-white">
+          <span className="mr-2 size-7 rounded-full bg-red-600 pl-[10px] pt-1 text-white">
             {cart.getTotalQuantity()}
           </span>
         )}

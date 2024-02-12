@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { getPlatformLogo } from '@/utils/getPlatformLogo'
 import { CartContext } from '@/contexts/CartContext'
 import { useContext } from 'react'
+import Link from 'next/link'
 
 export type ProductCardProps = {
   id: string
@@ -39,7 +40,10 @@ export default function ProductCard({
 
   console.log('props:', props.title)
   return (
-    <div className="flex flex-col rounded-xl bg-zinc-600 text-slate-100 transition-all hover:scale-105 hover:cursor-pointer">
+    <Link
+      className="flex flex-col rounded-xl bg-zinc-600 text-slate-100 transition-all hover:scale-105 hover:cursor-pointer"
+      href={`/product/${props.id}`}
+    >
       <Image
         src={props.image}
         alt={`${'merda'} image`}
@@ -91,6 +95,6 @@ export default function ProductCard({
           <p className="w-full text-center font-bold text-green-500">{`$${props.price}`}</p>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
