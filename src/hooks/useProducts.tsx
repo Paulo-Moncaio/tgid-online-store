@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 
 export type ProductsResponse = {
-  id: number | string;
+  id: string;
   title: string;
   platform: string;
   price: number;
