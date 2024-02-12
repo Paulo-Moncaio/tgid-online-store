@@ -1,8 +1,8 @@
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 
-export default function ProductDetailPage () {
-  const router = useRouter();
-  const { slug } = router.query;
+export default function ProductDetailPage() {
+  const router = useRouter()
+  const { slug } = router.query
 
   // Use o slug para buscar os detalhes do jogo no banco de dados ou em uma API
 
