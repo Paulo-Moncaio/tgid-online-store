@@ -52,7 +52,7 @@
     {
       "id": 8,
       "title": "Hades",
-      "platform": "Nintendo Switch",
+      "platform": "Steam",
       "price": 24.99,
       "image": "/Hades.webp"
     },
@@ -73,7 +73,7 @@
     {
       "id": 11,
       "title": "Cyberpunk 2077",
-      "platform": "PS4",
+      "platform": "Steam",
       "price": 49.99,
       "image": "/Cyberpunk-2077.webp"
     },
@@ -94,7 +94,7 @@
     {
       "id": 14,
       "title": "The Witcher 3: Wild Hunt",
-      "platform": "Nintendo Switch",
+      "platform": "Steam",
       "price": 39.99,
       "image": "/The_Witcher_3_Wild_Hunt.jpg"
     },
