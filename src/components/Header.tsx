@@ -4,30 +4,26 @@ import { ShoppingCartIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { useContext } from 'react'
 
-type HeaderProps = {
-  children?: React.ReactNode
-}
-
-export default function Header({ children }: HeaderProps) {
+export default function Header() {
   const cart = useContext(CartContext)
 
   return (
-    <>
-      <header className="fixed top-0 left-0 right-0 bg-white shadow-md flex items-center justify-between px-4 py-2">
-        <Link className="text-xl font-bold" href={'/'}>
-          Home
-        </Link>
-        <Link href="/cart" className="text-blue-500 flex">
-          Carrinho{' '}
-          {cart.getTotalQuantity() > 0 && (
-            <span className="bg-red-500 text-white rounded-full px-2 py-1">
-              {cart.getTotalQuantity()}
-            </span>
-          )}
-          <ShoppingCartIcon className="fill-white w-6 h-6 ml-2" />
-        </Link>
-      </header>
-      {children}
-    </>
+    <header className="fixed inset-x-0 top-0 z-10 flex items-center justify-between bg-slate-300 px-4 py-2 shadow-md">
+      <Link className="text-xl font-bold" href={'/'}>
+        Home
+      </Link>
+      <Link
+        href="/cart"
+        className="group flex items-center text-blue-500 transition-all hover:text-blue-600"
+      >
+        {cart.getTotalQuantity() > 0 && (
+          <span className="mr-2 size-7 rounded-full bg-red-600 pl-2 pt-1 text-white">
+            {cart.getTotalQuantity()}
+          </span>
+        )}
+        Carrinho
+        <ShoppingCartIcon className="ml-2 size-6 group-hover:scale-110" />
+      </Link>
+    </header>
   )
 }
